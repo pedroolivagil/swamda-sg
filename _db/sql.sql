@@ -1,0 +1,47 @@
+CREATE TABLE user (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(512) NOT NULL,
+    realname VARCHAR(255) NOT NULL,
+    realsurname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(15) NULL,
+    rol TINYINT UNSIGNED NOT NULL,
+    color VARCHAR(8) NULL UNIQUE,
+    flag_activo TINYINT(1) DEFAULT 1,
+    auth_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id),
+    INDEX(rol),
+    UNIQUE(username)
+) ENGINE = InnoDB;
+
+ALTER TABLE user ADD UNIQUE(email);
+
+CREATE TABLE rol (
+    id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR (255) NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+CREATE TABLE calendar_data (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    start DATETIME NOT NULL,
+    end DATETIME NULL,
+    start_time TIME NULL,
+    end_time TIME NULL,
+    url TEXT NULL,
+    auth INT UNSIGNED,
+    PRIMARY KEY (id),
+    INDEX(auth)
+) ENGINE = InnoDB;
+
+
+CREATE TABLE userlogin (
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    id_user INT UNSIGNED NOT NULL,
+    date_login DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    time_login TIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    INDEX (id_user)
+) ENGINE = InnoDB;

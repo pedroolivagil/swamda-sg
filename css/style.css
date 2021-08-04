@@ -1,0 +1,230 @@
+/* CSS Document */
+
+@font-face {
+	font-family: Ubuntu-Regular;
+	src: url('fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+html, body {
+	/* background: #ffeef2 !important; */
+	/* background: repeating-linear-gradient( -90deg, #FF004705, #FF004705 10px, #FF00470A 10px, #FF00470A 20px); */
+	background: #FFFFFF00;
+	font-family: Ubuntu-Regular, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+html {
+	/* fondo líneas */
+	/* background: repeating-linear-gradient( 0deg, #FF004707, #FF004707 10px, #FF004703 10px, #FF004703 20px); */
+	/* fondo rombos */
+	background-color: #feefff44;
+	background-image: linear-gradient(135deg, #ff7fbf11 25%, transparent 25%), linear-gradient(225deg, #ff7fbf11 25%, transparent 25%), linear-gradient(45deg, #ff7fbf11 25%, transparent 25%), linear-gradient(315deg, #ff7fbf11 25%, #feefff44 25%);
+	background-position: 60px 0, 60px 0, 0 0, 0 0;
+	background-size: 60px 60px;
+	background-repeat: repeat;
+	/* fondo zigzag */
+	/* background-position: 13px 0, 13px 0, 0 0, 0 0;
+	background-size: 26px 26px; */
+}
+
+.title {
+	color: #FF0047 !important;
+	font-weight: 700 !important;
+}
+
+.login-card {
+	width: 350px;
+	position: relative;
+}
+
+.navbar {
+	z-index: 15;
+}
+
+#calendar {
+	max-height: 800px;
+	margin: 0 auto;
+}
+
+#calendar-parent {
+	position: relative;
+	padding: 10px 50px;
+	z-index: 10;
+}
+
+.white, .white:hover {
+	color: #FFF !important;
+}
+
+.login-error-mesages {
+	max-width: 500px !important;
+	margin: 10px auto !important;
+}
+
+#exit a.dropdown-item {
+	background-color: #d10000 !important;
+	color: #fff;
+}
+
+#exit a.dropdown-item:hover {
+	background-color: #f12525 !important;
+}
+
+.more-options {
+	width: 93%;
+	color: #0dcaf0;
+	font-size: .6em;
+	cursor: pointer;
+	margin: 10px auto;
+}
+
+.more-options div:nth-child(odd) {
+	width: 36%;
+	display: inline-block;
+	border-bottom: 2px dotted #0dcaf0;
+	line-height: .05em;
+}
+
+.more-options div:nth-child(even) {
+	width: 25%;
+	display: inline-block;
+	text-align: center !important;
+	line-height: 1em;
+}
+
+.more-options div:nth-child(1) {
+	text-align: right !important;
+}
+
+.more-options div:nth-child(3)::before {
+	content: "]";
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.no-border-radius {
+	border-radius: 0 !important;
+}
+
+.fs-7 {
+	font-size: .7em;
+	line-height: 1em;
+}
+
+select option:checked {
+	background: #FF0047 -webkit-linear-gradient(bottom, #FF0047 0%, #FF0047 100%);
+}
+
+select option:hover {
+	background: #ff779d -webkit-linear-gradient(bottom, #ff779d 0%, #ff779d 100%);
+	color: #fff;
+}
+
+/**********************  Estilos por tipo pantalla  ************************/
+
+/* Resolución máxima para versión comprimida*/
+
+@media (max-width: 992px) {
+	#user-btn-nav, #user-btn-nav div, #btnGroupDrop1 {
+		width: 100% !important;
+	}
+	#calendar-parent {
+		padding: 10px 5px;
+	}
+	#calendar {
+		height: 650px;
+	}
+	.fc .fc-toolbar-title {
+		font-size: 1em;
+	}
+	.fc .fc-button .fc-icon {
+		font-size: .9em;
+	}
+	.fc .fc-button {
+		padding: .2em .4em;
+		font-size: .9em;
+	}
+}
+
+/*************  Estilos para el datatble  **************/
+
+#datatable-delete-events_wrapper div.row:first-child>div:first-child, #datatable-delete-events_wrapper div.row:last-child>div:first-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child input, #datatable-delete-events_wrapper div.row:first-child>div:last-child label {
+	display: none !important;
+}
+
+#datatable-delete-events_wrapper div.row:last-child>div:last-child {
+	width: 100% !important;
+}
+
+#datatable-delete-events_wrapper div.row:last-child>div:last-child ul {
+	margin: 0 auto !important;
+	width: 335px;
+}
+
+#datatable-delete-events_wrapper div.row:first-child>div:last-child input {
+	margin-bottom: 10px !important;
+}
+
+/*************  Estilos para el calendario  **************/
+
+.fc-daygrid, .fc-dayGridMonth-view, .fc-view {
+	background: #FFF;
+}
+
+.fc-col-header-cell-cushion {
+	color: rgba(0, 100, 100, 1) !important;
+	text-decoration: none;
+}
+
+.fc-daygrid-day-number {
+	color: rgb(0, 145, 133);
+	text-decoration: none;
+}
+
+.fc-daygrid-day-number:hover {
+	text-decoration: none !important;
+}
+
+.fc-toolbar-title {
+	text-transform: capitalize;
+}
+
+.fc-h-event {
+	border: 1px solid var(--fc-event-border-color, #FF0047);
+	background-color: var(--fc-event-bg-color, #FF0047);
+	color: #FFF;
+	padding: 0 5px;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+	background-color: #FF004711 !important;
+}
+
+/* Estilo para las casillas pasadas del calendario */
+
+.fc .fc-daygrid-day.fc-day-past {
+	background: repeating-linear-gradient( -45deg, #97979716, #97979716 10px, #97979709 10px, #97979709 21px);
+	background-position: 5px 0px;
+	background-repeat: repeat;
+	background-size: 29px 29px;
+}
+
+/*********  Genericos  *********/
+
+/* .login-card, .navbar, .fc-daygrid, .fc-dayGridMonth-view, .fc-view {
+	box-shadow: #ffb2c2 0 0 5px; 
+} */
+
+.login-card, .navbar {
+	box-shadow: #ffb2c2 0 0 5px;
+}
+
+.fc-theme-standard .fc-scrollgrid, .fc-theme-standard th {
+	border-color: #FF004766 !important;
+}
+
+.fc-theme-standard td {
+	border-color: #FF004744 !important;
+}

@@ -21,14 +21,34 @@ $user = unserialize($_SESSION['AUTH']);
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
                 <?php if($rolController->isGerente($user)){?>
-                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="add"><i class="bi bi-person-plus-fill"></i>&nbsp;&nbsp;Añadir evento</a></li>
-                    <!-- <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="edit"><i class="bi bi-person-check-fill"></i>&nbsp;&nbsp;Modificar evento</a></li> -->
-                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="delete"><i class="bi bi-person-x-fill"></i>&nbsp;&nbsp;Eliminar evento</a></li>
+                    <li>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="add" data-bs-blur-panels="#header,#wrapper" id="add-event">
+                            <i class="bi bi-person-plus-fill"></i>&nbsp;&nbsp;Añadir evento
+                        </a>
+                    </li>
+                    <!-- <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="edit" data-bs-blur-panels="#header,#wrapper" id="edit-event">
+                        <i class="bi bi-person-check-fill"></i>&nbsp;&nbsp;Modificar evento</a>
+                    </li> -->
+                    <li>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="delete" data-bs-blur-panels="#header,#wrapper" id="delete-event">
+                            <i class="bi bi-person-x-fill"></i>&nbsp;&nbsp;Eliminar evento
+                        </a>
+                    </li>
                     <li><hr class="dropdown-divider"></li>
                 <?php } ?>
-                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="conf"><i class="bi bi-gear-fill"></i>&nbsp;&nbsp;Configuración</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li id="exit"><a class="dropdown-item" href="#" onClick="logoutNav();"><i class="bi bi-key-fill"></i>&nbsp;&nbsp;Cerrar sesión</a></li>
+                <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="conf" data-bs-default-collapse-panel="#collapse-connections" data-bs-blur-panels="#header,#wrapper" id="conf-event">
+                        <i class="bi bi-gear-fill"></i>&nbsp;&nbsp;Configuración
+                    </a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li id="exit">
+                    <a class="dropdown-item" href="#" onClick="logoutNav();">
+                        <i class="bi bi-key-fill"></i>&nbsp;&nbsp;Cerrar sesión
+                    </a>
+            </li>
             </ul>
         </div>
     </div>

@@ -13,7 +13,6 @@ class User {
     private $flagactivo;
 
     public function __construct(){
-        $this->logged = false;
     }
     public function SetId($id){
         $this->id = $id;

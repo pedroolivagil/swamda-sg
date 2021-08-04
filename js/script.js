@@ -154,13 +154,36 @@ function getToday(){
 ////////////////////////////////
 // Auto ejecutable
 $(document).ready(function () {
-    var exampleModal = document.getElementById('adminModal')
-    exampleModal.addEventListener('show.bs.modal', function (event) {
-        // Button that triggered the modal
-        var button = event.relatedTarget
-        // Extract info from data-bs-* attributes
-        var recipient = button.getAttribute('data-bs-whatever')
-        // $('#admin-modal-body').load('components/modal-'+ recipient+'-event.php');
-        updateAdminModal(recipient);
+    var adminModal = document.getElementById('adminModal')
+    adminModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var recipient = button.getAttribute('data-bs-whatever');
+        var panelId = button.getAttribute('id');
+        var blurredPanels = button.getAttribute('data-bs-blur-panels');
+        var defaultContent = button.getAttribute('data-bs-default-collapse-panel');
+        $('#admin-modal-body').load('components/modal-'+ recipient +'-event.php', function(){
+            if (defaultContent != null) {
+                $(setTimeout(function () {
+                    $(defaultContent).collapse('show');
+                }, 150));
+            }
+            if (blurredPanels != null) {
+                $('#recovery').attr('data-bs-restore-blur', panelId);
+                var panelsArr = blurredPanels.split(",");
+                for (var index in panelsArr) {
+                    $(panelsArr[index]).addClass('filter-blur-10');
+                }
+            }
+        });
+    });
+    adminModal.addEventListener('hidden.bs.modal', function (event) {
+        var panelId = $('#recovery').attr('data-bs-restore-blur');
+        var blurredPanels = $('#' + panelId).attr('data-bs-blur-panels');
+        if (blurredPanels != null) {
+            var panelsArr = blurredPanels.split(",");
+            for (var index in panelsArr) {
+                $(panelsArr[index]).removeClass('filter-blur-10');
+            }
+        }
     });
 });

@@ -30,7 +30,7 @@ require_once('../server/controllers/controllers.php');
             <div class="form-floating mb-3">
                 <select class="form-select" id="users" name="users" size="3" multiple aria-label="multiple select" required
                     style="height:auto !important;">
-                    <?php $users = $userController->findAllAddEvent();
+                    <?php $users = $userController->findAllFullName();
                         foreach($users as $user) {
                     ?>
                     <option value="<?=$user->GetId(); ?>"><?=$user->GetFullName(); ?></option>

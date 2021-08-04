@@ -6,9 +6,11 @@ if (!isset($_SESSION['AUTH'])) {
     echo Tools::printErrorAlert("Inicia sesión con tu cuenta antes de realizar esta acción.");
 } else {
     $user = unserialize($_SESSION['AUTH']);
-    $phone = trim(strtolower($_POST['phone']));
+    $phone = str_replace(' ', '', trim(strtolower($_POST['phone'])));
     if ($phone == $user->GetPhone()) {
         echo Tools::printErrorAlert("El nuevo teléfono debe ser distinto.");
+    } else if (!Tools::isPhone($phone)) {
+        echo Tools::printErrorAlert("El nuevo teléfono debe ser válido.");
     } else {
         $user->SetPhone($phone);
         if ($userController->updatePhone($user)) {

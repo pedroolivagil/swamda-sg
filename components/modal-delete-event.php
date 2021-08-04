@@ -47,7 +47,7 @@ require_once('../server/controllers/controllers.php');
     <div class="modal-body">
         <div class="mb-3">
             <select class="form-select" id="users" name="users" size="3" aria-label="multiple select" style="height:auto !important;" onchange="updateDatatable()">
-                <?php $users = $userController->findAllAddEvent();
+                <?php $users = $userController->findAllFullName();
                 foreach ($users as $key => $user) {
                 ?>
                     <option <?= ($key == 0) ? 'selected' : ''; ?> value="<?= $user->GetFullName(); ?>">

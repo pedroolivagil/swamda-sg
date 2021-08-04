@@ -53,50 +53,11 @@ abstract class Tools {
 		if (CRYPT_BLOWFISH == 1) {
 			return crypt($str,'$2a$07$SwamDAsG52570b6fcf2eb$');
 		}
-	}	
-	public static function setCookie($id, $value){
-		setcookie($id, $value, EXPIRE, '/');
-	}	
-	public static function getCookie($id){
-		return $_COOKIE[$id];
-	}
-	public static function setNewCart(){
-		if(Tools::isEmpty(Tools::getCookie(_CART_)) or Tools::getCookie(_CART_) == NULL ){
-			$cesta = new Cart();
-			Tools::setCart($cesta);
-		}
-	}
-	public static function setCart($cesta){
-		Tools::setCookie(_CART_, base64_encode(serialize($cesta)));
-	}	
-	public static function getCart(){
-		return unserialize(base64_decode($_COOKIE[_CART_]));
 	}
 	public static function uniqID($leng){
 		// genera un ID único basándose en la hora
 		return substr(md5(microtime()),0,$leng);
 	}
-	public static function getMonth($number){
-		// retorna un string del mes del año segun el idioma escogido
-		$m = Tools::getLocale()->getString('MONTH');
-		return $m[$number-1];
-	}
-	public static function separator(){
-		return "\n<div class='line'></div>";
-	}
-	public static function perms($url){
-		return substr(sprintf('%o', fileperms($url)),-4);
-	}
-	public static function ch_mod777($url){
-		chmod($url,0777);
-	}
-	public static function ch_mod755($url){
-		chmod($url,0755);
-	}
-	public static function newDir($url){
-		// crea y/o da permisos 777 al directorio $url
-		return (is_dir($url))? Tools::ch_mod777($url) : mkdir($url,0777);
-	}	
 	public static function rmDots($str){
 		// quita los puntos de un string
 		$char=array(',','.',';',':','·');
@@ -150,10 +111,6 @@ abstract class Tools {
 			$z.= '0';
 		}
 		return $z.$str;
-	}
-	public static function phonef($phone){
-		$phone = str_replace(' ', '',trim($phone));
-		return substr($phone,0,3).' '.substr($phone,3,2).' '.substr($phone,5,2).' '.substr($phone,7,2);
 	}
 	public static function isPhone($phone){
 		return preg_match('/^[6-9]{1}[0-9]{8}$/',$phone);

@@ -46,6 +46,7 @@ require_once('config.php');
             </div>
         </div>
     </div>
+    <div style="display: none;" data-bs-restore-blur="" id="recovery"></div>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 

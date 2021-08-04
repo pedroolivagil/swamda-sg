@@ -35,10 +35,14 @@ html {
 .login-card {
 	width: 350px;
 	position: relative;
+	/* border: 1px solid #ffb2b2;
+	box-shadow: #ffb2c299 0 0 10px; */
 }
 
 .navbar {
 	z-index: 15;
+	border: 0;
+	border-bottom: 1px solid #ffb2b2;
 }
 
 #calendar {
@@ -118,6 +122,10 @@ select option:hover {
 	color: #fff;
 }
 
+.filter-blur-10 {
+	filter: blur(10px) !important;
+}
+
 /**********************  Estilos por tipo pantalla  ************************/
 
 /* Resolución máxima para versión comprimida*/
@@ -146,20 +154,20 @@ select option:hover {
 
 /*************  Estilos para el datatble  **************/
 
-#datatable-delete-events_wrapper div.row:first-child>div:first-child, #datatable-delete-events_wrapper div.row:last-child>div:first-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child input, #datatable-delete-events_wrapper div.row:first-child>div:last-child label {
+#datatable-delete-events_wrapper div.row:first-child>div:first-child, #datatable-delete-events_wrapper div.row:last-child>div:first-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child input, #datatable-delete-events_wrapper div.row:first-child>div:last-child label, #datatable-conections_wrapper div.row:first-child>div:first-child, #datatable-conections_wrapper div.row:last-child>div:first-child, #datatable-conections_wrapper div.row:first-child>div:last-child, #datatable-conections_wrapper div.row:first-child>div:last-child input, #datatable-conections_wrapper div.row:first-child>div:last-child label {
 	display: none !important;
 }
 
-#datatable-delete-events_wrapper div.row:last-child>div:last-child {
+#datatable-delete-events_wrapper div.row:last-child>div:last-child, #datatable-conections_wrapper div.row:last-child>div:last-child {
 	width: 100% !important;
 }
 
-#datatable-delete-events_wrapper div.row:last-child>div:last-child ul {
+#datatable-delete-events_wrapper div.row:last-child>div:last-child ul, #datatable-conections_wrapper div.row:last-child>div:last-child ul {
 	margin: 0 auto !important;
 	width: 335px;
 }
 
-#datatable-delete-events_wrapper div.row:first-child>div:last-child input {
+#datatable-delete-events_wrapper div.row:first-child>div:last-child input, #datatable-conections_wrapper div.row:first-child>div:last-child input {
 	margin-bottom: 10px !important;
 }
 
@@ -218,15 +226,11 @@ select option:hover {
 	background-size: 29px 29px;
 }
 
-/*********  Genericos  *********/
+/*********  Genericos sobreescritos  *********/
 
 /* .login-card, .navbar, .fc-daygrid, .fc-dayGridMonth-view, .fc-view {
 	box-shadow: #ffb2c2 0 0 5px; 
 } */
-
-.login-card, .navbar {
-	box-shadow: #ffb2c2 0 0 5px;
-}
 
 .fc-theme-standard .fc-scrollgrid, .fc-theme-standard th {
 	border-color: #FF004766 !important;
@@ -234,4 +238,28 @@ select option:hover {
 
 .fc-theme-standard td {
 	border-color: #FF004744 !important;
+}
+
+.card {
+	box-shadow: #ffb2c299 0 0 10px;
+}
+
+.card, .modal-content {
+	border: 1px solid #ffb2b2;
+}
+
+.card-header, .modal-header {
+	border-color: #ffb2c2;
+	background-color: #ffb2c233;
+}
+
+.modal-backdrop {
+	background-color: #300;
+}
+tr {
+	border-color: #ffb2c2;
+}
+tr.odd {
+	background: #FF000011 !important;
+	--bs-table-striped-bg: transparent !important;
 }

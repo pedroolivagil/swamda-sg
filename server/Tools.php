@@ -255,5 +255,29 @@ abstract class Tools {
 		$nuevaPassOk = $nuevaPassOk && preg_match('@[0-9]@', $pass);
 		return $nuevaPassOk;
 	}
+	public static function printSuccessAlert($text, $dissmisable = true) {
+		$msg = '<div class="alert alert-success alert-dismissible fade show" role="alert">';
+		$msg .= $text;
+		if ($dissmisable) {
+			$msg .= '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+		}
+		$msg .= '</div>';
+		return $msg;
+	}
+	public static function printErrorAlert($text, $dissmisable = true) {
+		$msg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+		$msg .= $text;
+		if ($dissmisable) {
+			$msg .= '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+		}
+		$msg .= '</div>';
+		return $msg;
+	}
+	public static function updateSessionUser(User $user) {
+    	$_SESSION['AUTH'] = serialize($user);
+	}
+	public static function getToday(){
+		return date('Y-m-d');
+	}
 }
 ?>

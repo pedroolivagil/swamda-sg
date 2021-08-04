@@ -13,8 +13,6 @@ $user = unserialize($_SESSION['AUTH']);
     <script>
     $(document).ready(function() {
         $('#optional-panel-hiden-add-event').hide(0);
-        // $('#collapse-password').collapse('show');
-        $('#collapse-email').collapse('show');
         $('.telephone').mask("999 999 999");
     });
     </script>

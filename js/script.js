@@ -132,6 +132,24 @@ function editColor() {
         $('#result-panel-modal-conf-event-color').html(msg);
     });
 }
+function updateAdminModal(type, func) {
+    $(setTimeout(function () {
+        $('#admin-modal-body').load('components/modal-conf-event.php');
+        $(setTimeout(function () {
+            $('#collapse-' + type).collapse('show');
+            func();
+        }, 250));
+    }, 1000));
+}
+
+function getToday(){
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+    return today;
+}
 
 ////////////////////////////////
 // Auto ejecutable
@@ -142,6 +160,7 @@ $(document).ready(function () {
         var button = event.relatedTarget
         // Extract info from data-bs-* attributes
         var recipient = button.getAttribute('data-bs-whatever')
-        $('#admin-modal-body').load('components/modal-'+ recipient+'-event.php');
+        // $('#admin-modal-body').load('components/modal-'+ recipient+'-event.php');
+        updateAdminModal(recipient);
     });
 });

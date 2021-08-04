@@ -1,11 +1,11 @@
 <div class="collapse multi-collapse" id="collapse-email">
     <form onsubmit="editEmail();return false;">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="oldemail" value="<?= $user->GetEmail(); ?>" disabled>
+            <input type="text" class="form-control text-muted" id="oldemail" value="<?= $user->GetEmail(); ?>" disabled>
             <label for="oldemail">Email</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" required value="<?= $user->GetEmail(); ?>">
+            <input type="email" class="form-control" id="email" required>
             <label for="email">Nuevo email</label>
         </div>
         <div class="form-floating mb-3">

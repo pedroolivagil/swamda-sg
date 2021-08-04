@@ -6,10 +6,10 @@
 </head>
 
 <body>
-	<form class="d-flex" onsubmit="loginNav();return false;">
+	<!-- <form class="d-flex" onsubmit="loginNav();return false;">
 		<input class="form-control me-2" type="text" placeholder="Usuario" id="user" required>
 		<input class="form-control me-2" type="password" placeholder="Contraseña" id="pass" required>
 		<button class="btn btn-sm btn-outline-primary" type="submit">Entrar</button>
-	</form>
+	</form> -->
 </body>
 </html>

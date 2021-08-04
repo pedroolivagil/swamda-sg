@@ -35,8 +35,6 @@ html {
 .login-card {
 	width: 350px;
 	position: relative;
-	/* border: 1px solid #ffb2b2;
-	box-shadow: #ffb2c299 0 0 10px; */
 }
 
 .navbar {
@@ -65,18 +63,9 @@ html {
 	margin: 10px auto !important;
 }
 
-#exit a.dropdown-item {
-	background-color: #d10000 !important;
-	color: #fff;
-}
-
-#exit a.dropdown-item:hover {
-	background-color: #f12525 !important;
-}
-
 .more-options {
 	width: 93%;
-	color: #0dcaf0;
+	color: #800040;
 	font-size: .6em;
 	cursor: pointer;
 	margin: 10px auto;
@@ -85,7 +74,7 @@ html {
 .more-options div:nth-child(odd) {
 	width: 36%;
 	display: inline-block;
-	border-bottom: 2px dotted #0dcaf0;
+	border-bottom: 2px dotted #800040;
 	line-height: .05em;
 }
 
@@ -240,11 +229,7 @@ select option:hover {
 	border-color: #FF004744 !important;
 }
 
-.card {
-	box-shadow: #ffb2c299 0 0 10px;
-}
-
-.card, .modal-content {
+.card, .modal-content, .dropdown-menu {
 	border: 1px solid #ffb2b2;
 }
 
@@ -256,10 +241,64 @@ select option:hover {
 .modal-backdrop {
 	background-color: #300;
 }
+
 tr {
 	border-color: #ffb2c2;
 }
+
 tr.odd {
 	background: #FF000011 !important;
 	--bs-table-striped-bg: transparent !important;
+}
+
+.dropdown-menu {
+	min-width: 250px;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+	color: #FFF !important;
+	background-color: #a00452;
+}
+
+.btn-primary {
+	color: #FFF !important;
+	background-color: #800040;
+	border-color: #6b0036;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+	color: #FFF !important;
+	background-color: #a00452;
+	border-color: #800040;
+	box-shadow: 0 0 0 .25rem #a0045288 !important;
+}
+
+.dropdown-divider {
+	border-color: #b5005a;
+}
+
+.dropdown-menu, .card {
+	/* box-shadow: #ffb2c299 0 0 10px; */
+	box-shadow: 0 0 .3rem #a0045288 !important;
+}
+
+.modal-title, .page-link, .page-link:hover, .page-link:active, .page-link:focus {
+	color: #800040;
+}
+
+.page-item.disabled .page-link {
+	color: #80004088 !important;
+}
+
+.page-link, .page-item.disabled, .page-link:hover, .page-link:active, .page-link:focus {
+	border-color: #6b003688 !important;
+}
+
+.page-link:hover, .page-link:focus {
+	background-color: #ffb2c255;
+}
+
+.page-link:focus {
+	background-color: #ffb2c255;
+	box-shadow: 0 0 0 .25rem #a0045244 !important;
 }

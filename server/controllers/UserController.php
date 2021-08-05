@@ -17,6 +17,22 @@ class UserController {
 		}
         return $collection;
     }
+    public function findAllColorManagement(){
+        $collection = array();
+		$sql = Tools::getDB()->query('SELECT id, username, color, realname, realsurname FROM user WHERE flag_Activo = TRUE');
+		if ($res = $sql->fetch_array()) {
+            do {
+                $user = new User();
+                $user->SetId($res['id']);
+                $user->SetUsername($res['username']);
+                $user->SetColor($res['color']);
+                $user->SetRealname($res['realname']);
+                $user->SetRealsurname($res['realsurname']);
+                array_push($collection, $user);
+			} while($res = $sql->fetch_array());
+		}
+        return $collection;
+    }
     public function findByUsername($username){
         $user = null;
 		$sql = Tools::getDB()->query('SELECT id, username, password, phone, realname, realsurname, rol, color, email, auth_date FROM user WHERE flag_Activo = TRUE AND username LIKE "'.strtoupper($username).'"');

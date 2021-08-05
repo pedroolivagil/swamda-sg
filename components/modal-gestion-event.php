@@ -12,8 +12,7 @@ $user = unserialize($_SESSION['AUTH']);
     <title>SWAMDA SG</title>
     <script>
     $(document).ready(function() {
-        $('#optional-panel-hiden-add-event').hide(0);
-        $('.telephone').mask("999 999 999");
+        // $('.telephone').mask("999 999 999");
     });
     </script>
 </head>
@@ -24,45 +23,33 @@ $user = unserialize($_SESSION['AUTH']);
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <div class="form-floating mb-3">
+        <!-- <div class="form-floating mb-3">
             <input type="text" class="form-control text-muted" id="username" disabled
                 value="<?= $user->GetUsername(); ?>">
             <label for="username">Usuario</label>
-        </div>
+        </div> -->
         <div class="container mb-2" style="text-align:center;">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-password" aria-expanded="false" aria-controls="collapse-password"
-                    onclick="collapsePanels('#collapse-phone,#collapse-email,#collapse-color,#collapse-connections')">
-                    Contraseña
+                    data-bs-target="#collapse-colors" aria-expanded="false" aria-controls="collapse-colors"
+                    onclick="collapsePanels('#collapse-newuser,#collapse-deluser')">
+                    Gestionar colores
                 </button>
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-email" aria-expanded="false" aria-controls="collapse-email"
-                    onclick="collapsePanels('#collapse-password,#collapse-phone,#collapse-color,#collapse-connections')">
-                    Email
+                    data-bs-target="#collapse-newuser" aria-expanded="false" aria-controls="collapse-newuser"
+                    onclick="collapsePanels('#collapse-deluser,#collapse-colors')">
+                    Alta de empleado
                 </button>
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-phone" aria-expanded="false" aria-controls="collapse-phone"
-                    onclick="collapsePanels('#collapse-password,#collapse-email,#collapse-color,#collapse-connections')">
-                    Teléfono
-                </button>
-                <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-color" aria-expanded="false" aria-controls="collapse-color"
-                    onclick="collapsePanels('#collapse-password,#collapse-email,#collapse-phone,#collapse-connections')">
-                    Color
-                </button>
-                <button class="btn btn-sm btn-primary my-1" style="color:#fff;" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-connections" aria-expanded="false" aria-controls="collapse-conections"
-                    onclick="collapsePanels('#collapse-password,#collapse-email,#collapse-phone,#collapse-color')">
-                    Accesos
+                    data-bs-target="#collapse-deluser" aria-expanded="false" aria-controls="collapse-deluser"
+                    onclick="collapsePanels('#collapse-colors,#collapse-newuser')">
+                    Baja de empleado
                 </button>
             </div>
         </div>
-        <?php include_once('modals-config/modal-password.php'); ?>
-        <?php include_once('modals-config/modal-email.php'); ?>
-        <?php include_once('modals-config/modal-phone.php'); ?>
-        <?php include_once('modals-config/modal-color.php'); ?>
-        <?php include_once('modals-config/modal-access.php'); ?>
+        <?php include_once('modals-management/modal-colors.php'); ?>
+        <?php include_once('modals-management/modal-newuser.php'); ?>
+        <?php include_once('modals-management/modal-deluser.php'); ?>
     </div>
 </body>
 </html>

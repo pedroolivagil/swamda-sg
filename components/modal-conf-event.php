@@ -12,7 +12,6 @@ $user = unserialize($_SESSION['AUTH']);
     <title>SWAMDA SG</title>
     <script>
     $(document).ready(function() {
-        $('#optional-panel-hiden-add-event').hide(0);
         $('.telephone').mask("999 999 999");
     });
     </script>

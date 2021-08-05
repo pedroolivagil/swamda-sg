@@ -21,7 +21,7 @@
             <div id="email" class="form-text fs-7 ps-2">El usuario, la contraseña y el color del empleado se genera automáticamente.</div>
         </div>
         <div id="result-panel-modal-gestion-event-newuser"></div>
-        <div class="width-100 tex">
+        <div class="width-100 text-center">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="reset" class="btn btn-secondary">Borrar campos</button>
                 <button type="submit" class="btn btn-primary">Añadir empleado</button>

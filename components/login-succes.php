@@ -34,12 +34,12 @@ $user = unserialize($_SESSION['AUTH']);
                     <li>
                         <hr class="dropdown-divider">
                     </li>
+                    <li>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="gestion" data-bs-default-collapse-panel="#collapse-newuser" data-bs-blur-panels="#header,#wrapper" id="gestion-event">
+                            <i class="me-3 bi bi-people-fill"></i>Gestionar empleados
+                        </a>
+                    </li>
                 <?php } ?>
-                <li>
-                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="gestion" data-bs-default-collapse-panel="#collapse-newuser" data-bs-blur-panels="#header,#wrapper" id="gestion-event">
-                        <i class="me-3 bi bi-people-fill"></i>Gestionar empleados
-                    </a>
-                </li>
                 <li>
                     <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="conf" data-bs-default-collapse-panel="#collapse-connections" data-bs-blur-panels="#header,#wrapper" id="conf-event">
                         <i class="me-3 bi bi-gear-fill"></i>Configuración

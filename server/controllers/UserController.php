@@ -157,4 +157,12 @@ class UserController {
         }
         return $result;
     }
+    public function persist(User $user) {
+        $result = false;
+        $query = 'INSERT INTO user(username, password, phone, realname, realsurname, rol, color, email) VALUES ("' . $user->GetUsername() . '","' . $user->GetPassword() . '","' . $user->GetPhone() . '","' . $user->GetRealname() . '","' . $user->GetRealsurname() . '",' . $user->GetRol() . ',"' . $user->GetColor() . '","' . $user->GetEmail() . '")';
+        if (Tools::getDB()->query($query)) {
+            $result = true;
+        }
+        return $result;
+    }
 }

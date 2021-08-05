@@ -236,5 +236,34 @@ abstract class Tools {
 	public static function getToday(){
 		return date('Y-m-d');
 	}
+	public static function getContrastYIQ($hexcolor) {
+		$r = hexdec(substr($hexcolor, 0, 2));
+		$g = hexdec(substr($hexcolor, 2, 2));
+		$b = hexdec(substr($hexcolor, 4, 2));
+		$yiq = (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+		return ($yiq >= 128) ? 'black' : 'white';
+	}
+	public static function getContrast50($hexcolor) {
+		return (hexdec($hexcolor) > 0xffffff / 2) ? 'black' : 'white';
+	}
+	public static function randomColor() {
+		return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+	}
+	public static function readConfig($filename){
+		return json_decode(file_get_contents($filename), true);
+	}
+	public static function htmlEntityDecode($tpl){
+		return html_entity_decode($tpl, ENT_QUOTES, 'UTF-8');
+	}
+	public static function ch_mod777($url){
+		chmod($url,0777);
+	}
+	public static function ch_mod755($url){
+		chmod($url,0755);
+	}
+	public static function getMailBodyContact($realname, $username, $pass) {
+		$file = file_get_contents(MAILBODY_CONTACT) or exit("Error al abrir contact.txt!");
+		$txt = str_replace('[NAME]', ucfirst($realname), str_replace('[USERNAME]', ucfirst($username), str_replace('[KEY]', ucfirst($pass), $file))) . "\n";
+		return $txt;
+	}
 }
-?>

@@ -19,7 +19,7 @@ if (!isset($_SESSION['AUTH'])) {
         if ($userController->updatePassword($user)) {
             Tools::updateSessionUser($user);
             echo Tools::printSuccessAlert("Contraseña actualizada.");
-            echo "<script>updateAdminModal('pass')</script>";
+            echo "<script>updateAdminModal('conf','pass')</script>";
         } else {
             echo Tools::printErrorAlert("Ha ocurrido un error inesperado. Vuelve a intentarlo más tarde.");
         }

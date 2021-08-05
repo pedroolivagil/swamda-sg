@@ -11,9 +11,9 @@ $user = unserialize($_SESSION['AUTH']);
     <meta charset="utf-8">
     <title>SWAMDA SG</title>
     <script>
-    $(document).ready(function() {
-        // $('.telephone').mask("999 999 999");
-    });
+        $(document).ready(function() {
+            $('.telephone').mask("999 999 999");
+        });
     </script>
 </head>
 
@@ -23,26 +23,15 @@ $user = unserialize($_SESSION['AUTH']);
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <!-- <div class="form-floating mb-3">
-            <input type="text" class="form-control text-muted" id="username" disabled
-                value="<?= $user->GetUsername(); ?>">
-            <label for="username">Usuario</label>
-        </div> -->
         <div class="container mb-2" style="text-align:center;">
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-colors" aria-expanded="false" aria-controls="collapse-colors"
-                    onclick="collapsePanels('#collapse-newuser,#collapse-deluser')">
+                <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-colors" aria-expanded="false" aria-controls="collapse-colors" onclick="collapsePanels('#collapse-newuser,#collapse-deluser')">
                     Gestionar colores
                 </button>
-                <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-newuser" aria-expanded="false" aria-controls="collapse-newuser"
-                    onclick="collapsePanels('#collapse-deluser,#collapse-colors')">
+                <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-newuser" aria-expanded="false" aria-controls="collapse-newuser" onclick="collapsePanels('#collapse-deluser,#collapse-colors')">
                     Alta de empleado
                 </button>
-                <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse-deluser" aria-expanded="false" aria-controls="collapse-deluser"
-                    onclick="collapsePanels('#collapse-colors,#collapse-newuser')">
+                <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-deluser" aria-expanded="false" aria-controls="collapse-deluser" onclick="collapsePanels('#collapse-colors,#collapse-newuser')">
                     Baja de empleado
                 </button>
             </div>
@@ -52,4 +41,5 @@ $user = unserialize($_SESSION['AUTH']);
         <?php include_once('modals-management/modal-deluser.php'); ?>
     </div>
 </body>
+
 </html>

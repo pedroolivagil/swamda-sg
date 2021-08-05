@@ -1,304 +1,374 @@
 /* CSS Document */
 
 @font-face {
-	font-family: Ubuntu-Regular;
-	src: url('fonts/Ubuntu/Ubuntu-Regular.ttf');
+    font-family: Ubuntu-Regular;
+    src: url('fonts/Ubuntu/Ubuntu-Regular.ttf');
 }
 
-html, body {
-	/* background: #ffeef2 !important; */
-	/* background: repeating-linear-gradient( -90deg, #FF004705, #FF004705 10px, #FF00470A 10px, #FF00470A 20px); */
-	background: #FFFFFF00;
-	font-family: Ubuntu-Regular, Helvetica Neue, Helvetica, sans-serif;
-	font-size: 1em;
+html,
+body {
+    /* background: #ffeef2 !important; */
+    /* background: repeating-linear-gradient( -90deg, #FF004705, #FF004705 10px, #FF00470A 10px, #FF00470A 20px); */
+    background: #FFFFFF00;
+    font-family: Ubuntu-Regular, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 html {
-	/* fondo líneas */
-	/* background: repeating-linear-gradient( 0deg, #FF004707, #FF004707 10px, #FF004703 10px, #FF004703 20px); */
-	/* fondo rombos */
-	background-color: #feefff44;
-	background-image: linear-gradient(135deg, #ff7fbf11 25%, transparent 25%), linear-gradient(225deg, #ff7fbf11 25%, transparent 25%), linear-gradient(45deg, #ff7fbf11 25%, transparent 25%), linear-gradient(315deg, #ff7fbf11 25%, #feefff44 25%);
-	background-position: 60px 0, 60px 0, 0 0, 0 0;
-	background-size: 60px 60px;
-	background-repeat: repeat;
-	/* fondo zigzag */
-	/* background-position: 13px 0, 13px 0, 0 0, 0 0;
+    /* fondo líneas */
+    /* background: repeating-linear-gradient( 0deg, #FF004707, #FF004707 10px, #FF004703 10px, #FF004703 20px); */
+    /* fondo rombos */
+    background-color: #feefff44;
+    background-image: linear-gradient(135deg, #ff7fbf11 25%, transparent 25%), linear-gradient(225deg, #ff7fbf11 25%, transparent 25%), linear-gradient(45deg, #ff7fbf11 25%, transparent 25%), linear-gradient(315deg, #ff7fbf11 25%, #feefff44 25%);
+    background-position: 60px 0, 60px 0, 0 0, 0 0;
+    background-size: 60px 60px;
+    background-repeat: repeat;
+    /* fondo zigzag */
+    /* background-position: 13px 0, 13px 0, 0 0, 0 0;
 	background-size: 26px 26px; */
 }
 
 .title {
-	color: #FF0047 !important;
-	font-weight: 700 !important;
+    color: #FF0047 !important;
+    font-weight: 700 !important;
 }
 
 .login-card {
-	width: 350px;
-	position: relative;
+    width: 350px;
+    position: relative;
 }
 
 .navbar {
-	z-index: 15;
-	border: 0;
-	border-bottom: 1px solid #ffb2b2;
+    z-index: 15;
+    border: 0;
+    border-bottom: 1px solid #ffb2b2;
 }
 
 #calendar {
-	max-height: 800px;
-	margin: 0 auto;
+    max-height: 800px;
+    margin: 0 auto;
 }
 
 #calendar-parent {
-	position: relative;
-	padding: 10px 50px;
-	z-index: 10;
+    position: relative;
+    padding: 10px 50px;
+    z-index: 10;
 }
 
-.white, .white:hover {
-	color: #FFF !important;
+.white,
+.white:hover {
+    color: #FFF !important;
 }
 
 .login-error-mesages {
-	max-width: 500px !important;
-	margin: 10px auto !important;
+    max-width: 500px !important;
+    margin: 10px auto !important;
 }
 
 .more-options {
-	width: 93%;
-	color: #800040;
-	font-size: .6em;
-	cursor: pointer;
-	margin: 10px auto;
+    width: 93%;
+    color: #800040;
+    font-size: .6em;
+    cursor: pointer;
+    margin: 10px auto;
 }
 
 .more-options div:nth-child(odd) {
-	width: 36%;
-	display: inline-block;
-	border-bottom: 2px dotted #800040;
-	line-height: .05em;
+    width: 36%;
+    display: inline-block;
+    border-bottom: 2px dotted #800040;
+    line-height: .05em;
 }
 
 .more-options div:nth-child(even) {
-	width: 25%;
-	display: inline-block;
-	text-align: center !important;
-	line-height: 1em;
+    width: 25%;
+    display: inline-block;
+    text-align: center !important;
+    line-height: 1em;
 }
 
 .more-options div:nth-child(1) {
-	text-align: right !important;
+    text-align: right !important;
 }
 
 .more-options div:nth-child(3)::before {
-	content: "]";
+    content: "]";
 }
 
 .width-100 {
-	width: 100%;
+    width: 100%;
 }
 
 .fs-7 {
-	font-size: .7em;
-	line-height: 1em;
+    font-size: .7em;
+    line-height: 1em;
 }
 
 select option:checked {
-	background: #FF0047 -webkit-linear-gradient(bottom, #FF0047 0%, #FF0047 100%);
+    background: #FF0047 -webkit-linear-gradient(bottom, #FF0047 0%, #FF0047 100%);
 }
 
 select option:hover {
-	background: #ff779d -webkit-linear-gradient(bottom, #ff779d 0%, #ff779d 100%);
-	color: #fff;
+    background: #ff779d -webkit-linear-gradient(bottom, #ff779d 0%, #ff779d 100%);
+    color: #fff;
 }
 
 .filter-blur-10 {
-	filter: blur(10px) !important;
+    filter: blur(10px) !important;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.texto-prueba-color {
+    max-width: 8rem !important;
+    text-align: center;
+    position: relative;
+    bottom: 24px;
+    cursor: pointer;
+}
+
+
 /**********************  Estilos por tipo pantalla  ************************/
+
 
 /* Resolución máxima para versión comprimida*/
 
 @media (max-width: 992px) {
-	#user-btn-nav, #user-btn-nav div, #btnGroupDrop1 {
-		width: 100% !important;
-	}
-	#calendar-parent {
-		padding: 10px 5px;
-	}
-	#calendar {
-		height: 650px;
-	}
-	.fc .fc-toolbar-title {
-		font-size: 1em;
-	}
-	.fc .fc-button .fc-icon {
-		font-size: .9em;
-	}
-	.fc .fc-button {
-		padding: .2em .4em;
-		font-size: .9em;
-	}
+    #user-btn-nav,
+    #user-btn-nav div,
+    #btnGroupDrop1 {
+        width: 100% !important;
+    }
+    #calendar-parent {
+        padding: 10px 5px;
+    }
+    #calendar {
+        height: 650px;
+    }
+    .fc .fc-toolbar-title {
+        font-size: 1em;
+    }
+    .fc .fc-button .fc-icon {
+        font-size: .9em;
+    }
+    .fc .fc-button {
+        padding: .2em .4em;
+        font-size: .9em;
+    }
+    .hidden {
+        display: table-cell !important;
+    }
 }
+
 
 /*************  Estilos para el datatble  **************/
 
-#datatable-delete-events_wrapper div.row:first-child>div:first-child, #datatable-delete-events_wrapper div.row:last-child>div:first-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child, #datatable-delete-events_wrapper div.row:first-child>div:last-child input, #datatable-delete-events_wrapper div.row:first-child>div:last-child label, #datatable-conections_wrapper div.row:first-child>div:first-child, #datatable-conections_wrapper div.row:last-child>div:first-child, #datatable-conections_wrapper div.row:first-child>div:last-child, #datatable-conections_wrapper div.row:first-child>div:last-child input, #datatable-conections_wrapper div.row:first-child>div:last-child label {
-	display: none !important;
+#datatable-delete-events_wrapper div.row:first-child>div:first-child,
+#datatable-delete-events_wrapper div.row:last-child>div:first-child,
+#datatable-delete-events_wrapper div.row:first-child>div:last-child,
+#datatable-delete-events_wrapper div.row:first-child>div:last-child input,
+#datatable-delete-events_wrapper div.row:first-child>div:last-child label,
+#datatable-conections_wrapper div.row:first-child>div:first-child,
+#datatable-conections_wrapper div.row:last-child>div:first-child,
+#datatable-conections_wrapper div.row:first-child>div:last-child,
+#datatable-conections_wrapper div.row:first-child>div:last-child input,
+#datatable-conections_wrapper div.row:first-child>div:last-child label,
+#datatable-colors_wrapper div.row:first-child>div:first-child,
+#datatable-colors_wrapper div.row:last-child>div:first-child,
+#datatable-colors_wrapper div.row:first-child>div:last-child,
+#datatable-colors_wrapper div.row:first-child>div:last-child input,
+#datatable-colors_wrapper div.row:first-child>div:last-child label {
+    display: none !important;
 }
 
-#datatable-delete-events_wrapper div.row:last-child>div:last-child, #datatable-conections_wrapper div.row:last-child>div:last-child {
-	width: 100% !important;
+#datatable-delete-events_wrapper div.row:last-child>div:last-child,
+#datatable-conections_wrapper div.row:last-child>div:last-child,
+#datatable-colors_wrapper div.row:last-child>div:last-child {
+    width: 100% !important;
 }
 
-#datatable-delete-events_wrapper div.row:last-child>div:last-child ul, #datatable-conections_wrapper div.row:last-child>div:last-child ul {
-	margin: 0 auto !important;
-	width: 335px;
+#datatable-delete-events_wrapper div.row:last-child>div:last-child ul,
+#datatable-conections_wrapper div.row:last-child>div:last-child ul,
+#datatable-colors_wrapper div.row:last-child>div:last-child ul {
+    margin: 0 auto !important;
+    width: 335px;
 }
 
-#datatable-delete-events_wrapper div.row:first-child>div:last-child input, #datatable-conections_wrapper div.row:first-child>div:last-child input {
-	margin-bottom: 10px !important;
+#datatable-delete-events_wrapper div.row:first-child>div:last-child input,
+#datatable-conections_wrapper div.row:first-child>div:last-child input,
+#datatable-colors_wrapper div.row:first-child>div:last-child input {
+    margin-bottom: 10px !important;
 }
+
 
 /*************  Estilos para el calendario  **************/
 
-.fc-daygrid, .fc-dayGridMonth-view, .fc-view {
-	background: #FFF;
+.fc-daygrid,
+.fc-dayGridMonth-view,
+.fc-view {
+    background: #FFF;
 }
 
 .fc-col-header-cell-cushion {
-	color: rgba(0, 100, 100, 1) !important;
-	text-decoration: none;
+    color: rgba(0, 100, 100, 1) !important;
+    text-decoration: none;
 }
 
 .fc-daygrid-day-number {
-	color: #ff00c8;
-	/* color: #800040; */
-	text-decoration: none;
-	background: #FFFFFFAA;
-	border-radius: 0 0 0 10px;
-	width: 35px;
-	height: 35px;
-	text-align: center;
-	border: 1px solid #FF004766;
-	font-weight: 700;
-	margin-top: -1px;
-	margin-right: -1px;
+    color: #ff00c8;
+    /* color: #800040; */
+    text-decoration: none;
+    background: #FFFFFFAA;
+    border-radius: 0 0 0 10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #FF004766;
+    font-weight: 700;
+    margin-top: -1px;
+    margin-right: -1px;
 }
 
 .fc-daygrid-day-number:hover {
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .fc-toolbar-title {
-	text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .fc-h-event {
-	border: 1px solid var(--fc-event-border-color, #FF0047);
-	background-color: var(--fc-event-bg-color, #FF0047);
-	color: #FFF;
-	padding: 0 5px;
+    border: 1px solid var(--fc-event-border-color, #FF0047);
+    background-color: var(--fc-event-bg-color, #FF0047);
+    color: #FFF;
+    padding: 0 5px;
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-	background-color: #FF004711 !important;
+    background-color: #FF004711 !important;
 }
+
 
 /* Estilo para las casillas pasadas del calendario */
 
 .fc .fc-daygrid-day.fc-day-past {
-	/* background: repeating-linear-gradient( -45deg, #97979716, #97979716 10px, #97979709 10px, #97979709 21px); */
-	background: repeating-linear-gradient( -45deg, #ff00c833, #ff00c833 10px, #ff00c822 10px, #ff00c822 21px);
-	background-position: 5px 0px;
-	background-repeat: repeat;
-	background-size: 29px 29px;
+    /* background: repeating-linear-gradient( -45deg, #97979716, #97979716 10px, #97979709 10px, #97979709 21px); */
+    background: repeating-linear-gradient( -45deg, #ff00c833, #ff00c833 10px, #ff00c822 10px, #ff00c822 21px);
+    background-position: 5px 0px;
+    background-repeat: repeat;
+    background-size: 29px 29px;
 }
 
+
 /*********  Genericos sobreescritos  *********/
+
 
 /* .login-card, .navbar, .fc-daygrid, .fc-dayGridMonth-view, .fc-view {
 	box-shadow: #ffb2c2 0 0 5px; 
 } */
 
-.fc-theme-standard .fc-scrollgrid, .fc-theme-standard th {
-	border-color: #FF004766 !important;
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard th {
+    border-color: #FF004766 !important;
 }
 
 .fc-theme-standard td {
-	border-color: #FF004744 !important;
+    border-color: #FF004744 !important;
 }
 
-.card, .modal-content, .dropdown-menu {
-	border: 1px solid #ffb2b2;
+.card,
+.modal-content,
+.dropdown-menu {
+    border: 1px solid #ffb2b2;
 }
 
-.card-header, .modal-header {
-	border-color: #ffb2c2;
-	background-color: #ffb2c233;
+.card-header,
+.modal-header {
+    border-color: #ffb2c2;
+    background-color: #ffb2c233;
 }
 
 .modal-backdrop {
-	background-color: #300;
+    background-color: #300;
 }
 
 tr {
-	border-color: #ffb2c2;
+    border-color: #ffb2c2;
 }
 
 tr.odd {
-	background: #FF000011 !important;
-	--bs-table-striped-bg: transparent !important;
+    background: #FF000011 !important;
+    --bs-table-striped-bg: transparent !important;
 }
 
 .dropdown-menu {
-	min-width: 250px;
+    min-width: 250px;
 }
 
-.dropdown-item:focus, .dropdown-item:hover {
-	color: #FFF !important;
-	background-color: #a00452;
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #FFF !important;
+    background-color: #a00452;
 }
 
 .btn-primary {
-	color: #FFF !important;
-	background-color: #800040;
-	border-color: #6b0036;
+    color: #FFF !important;
+    background-color: #800040;
+    border-color: #6b0036;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
-	color: #FFF !important;
-	background-color: #a00452;
-	border-color: #800040;
-	box-shadow: 0 0 0 .25rem #a0045288 !important;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+    color: #FFF !important;
+    background-color: #a00452;
+    border-color: #800040;
+    box-shadow: 0 0 0 .25rem #a0045288 !important;
 }
 
 .dropdown-divider {
-	border-color: #b5005a;
+    border-color: #b5005a;
 }
 
-.dropdown-menu, .card {
-	/* box-shadow: #ffb2c299 0 0 10px; */
-	box-shadow: 0 0 .3rem #a0045288 !important;
+.dropdown-menu,
+.card {
+    /* box-shadow: #ffb2c299 0 0 10px; */
+    box-shadow: 0 0 .3rem #a0045288 !important;
 }
 
-.modal-title, .page-link, .page-link:hover, .page-link:active, .page-link:focus {
-	color: #800040;
+.modal-title,
+.page-link,
+.page-link:hover,
+.page-link:active,
+.page-link:focus {
+    color: #800040;
 }
 
 .page-item.disabled .page-link {
-	color: #80004088 !important;
+    color: #80004088 !important;
 }
 
-.page-link, .page-item.disabled, .page-link:hover, .page-link:active, .page-link:focus {
-	border-color: #6b003688 !important;
+.page-link,
+.page-item.disabled,
+.page-link:hover,
+.page-link:active,
+.page-link:focus {
+    border-color: #6b003688 !important;
 }
 
-.page-link:hover, .page-link:focus {
-	background-color: #ffb2c255;
+.page-link:hover,
+.page-link:focus {
+    background-color: #ffb2c255;
 }
 
 .page-link:focus {
-	background-color: #ffb2c255;
-	box-shadow: 0 0 0 .25rem #a0045244 !important;
+    background-color: #ffb2c255;
+    box-shadow: 0 0 0 .25rem #a0045244 !important;
+}
+
+.form-control-color {
+    max-width: 8rem !important;
 }

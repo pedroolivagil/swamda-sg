@@ -7,8 +7,7 @@
 // define('MAXFILESIZE', ini_get('upload_max_filesize')*1024); 	// En KB -> 3MB
 // define('MAXDIRSIZE', 20480);  		// en KB -> 20MB
 // define('CONTRATO', 'contrato');
-define('MAILTECNIC', 'olivadevelop@gmail.com');
-define('_CART_','cesta_compra');
+define('MAILTECNIC', 'pedroolivagil@gmail.com');
 
 // DB Constants
 define('dbhost', 'localhost');
@@ -20,7 +19,7 @@ define('dbpass', 'tY5ia3&0_Ab21swamdasg');
 $root = ($_SERVER['SERVER_NAME']=='localhost')? '/swamda-sg':'';
 // define('MAILBODY_NEWUSER',  $_SERVER['DOCUMENT_ROOT'].$root.'/forms/newuser.txt');
 // define('MAILBODY_NEWORDER', $_SERVER['DOCUMENT_ROOT'].$root.'/forms/neworder.txt');
-// define('MAILBODY_CONTACT',  $_SERVER['DOCUMENT_ROOT'].$root.'/forms/contact.txt');
+define('MAILBODY_CONTACT',  $_SERVER['DOCUMENT_ROOT'] . $root . '/config/contact.txt');
 // define('MAILBODY_RECOVERY',  $_SERVER['DOCUMENT_ROOT'].$root.'/forms/recovery.txt');
 // define('_LEGAL_FILE_','legal.txt');
 
@@ -41,5 +40,8 @@ define('_JS_PATH_',		'http://'.$_SERVER['SERVER_NAME'].$root.'/js/');
 //error_reporting(E_ALL ^ E_NOTICE);
 //ini_set('display_errors',1);
 header('Content-type: text/html; charset=utf-8');
+//Load Composer's autoloader
+require_once('third.party/vendor/autoload.php');
 require_once('server/Tools.php');
+require_once('server/Mail.php');
 ?>

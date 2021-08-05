@@ -24,7 +24,7 @@ require_once('config.php');
     <script>
         $(document).ready(function() {
             $('#header').load('components/nav.php');
-            $('#wrapper').load('components/wrapper.php');
+            // $('#wrapper').load('components/wrapper.php');
         });
     </script>
 </head>

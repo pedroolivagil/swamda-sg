@@ -17,7 +17,7 @@ if (!isset($_SESSION['AUTH'])) {
         if ($userController->updateEmail($user)) {
             Tools::updateSessionUser($user);
             echo Tools::printSuccessAlert("Cambios actualizados.");
-            echo "<script>updateAdminModal('email')</script>";
+            echo "<script>updateAdminModal('conf','email')</script>";
         } else {
             echo Tools::printErrorAlert("Ha ocurrido un error inesperado. Vuelve a intentarlo más tarde.");
         }

@@ -13,6 +13,7 @@ if (!isset($_SESSION['AUTH'])) {
         $array = $calendarController->findByUser($current);
         foreach ($array as $curr){
             $curr->SetColor($current->GetColor());
+            $curr->SetTextColor(Tools::getContrastYIQ($current->GetColor()));
         }
         $calendarData = array_merge($calendarData, $array);
     }

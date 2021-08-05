@@ -1,0 +1,63 @@
+<!doctype html>
+<html> 
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<style>
+		body, html, .wrapper {
+			font-family: 'Open Sans', Helvetica, sans-serif;
+			background-color: #feefff !important;
+			background: linear-gradient(135deg, #ff7fbf33 25%, transparent 25%), linear-gradient(225deg, #ff7fbf33 25%, transparent 25%), linear-gradient(45deg, #ff7fbf22 25%, transparent 25%), linear-gradient(315deg, #ff7fbf22 25%, #feefff44 25%) !important;
+			background-position: 60px 0, 60px 0, 0 0, 0 0;
+			background-size: 60px 60px;
+			background-repeat: repeat  !important;
+			font-size:1em !important;
+			color:#333 !important;
+		}
+		.title {
+   			color: #FF0047 !important;
+    		font-weight: 700 !important;
+		}
+		.wrapper {
+			margin:20px auto;
+			padding: 20px;
+			border: 1px solid #ff7fbf;
+			max-width: 500px;
+		}
+		.data {
+			color:#EFEFEF !important;
+		}
+		.line {
+			border-bottom: 1px dashed #ff7fbf;
+			margin: 10px auto;
+			width:100%;
+		}
+		</style>
+	</head> 
+	<body>
+		<div style="padding: 50px 0; background:#FFF !important;">
+			<div class='wrapper'>
+				<table>
+					<tr>
+						<td colspan="2"><h1 class="title">Hola, [NAME]</h1></td>
+					</tr>
+					<tr>
+						<td colspan="2"><p>El administrador de <strong class="title">SWAMDA SG</strong> te ha dado de alta con los siguientes credenciales:</p></td>
+					</tr>
+					<tr>
+						<td style="width: 50px;">Usuario</td>
+						<td><span class="title">[USERNAME]</span></td>
+					</tr>
+					<tr>
+						<td>Clave</td>
+						<td><span class="title">[KEY]</span></td>
+					</tr>
+				</table>
+				<div class="line"></div>
+				<p>Puedes acceder a la aplicación desde este enlace.</p>
+				<p><strong>Te recomendamos encarecidamente que modifiques la contraseña por motivos de seguridad.</strong></p>
+			</div>
+		</div>
+	</body> 
+</html>

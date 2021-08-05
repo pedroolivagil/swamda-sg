@@ -9,6 +9,7 @@ class CalendarData extends _EntitySerialize {
     private $url;
     private $auth;
     private $color;
+    private $textColor;
 
     public function __construct(){
     }
@@ -40,6 +41,9 @@ class CalendarData extends _EntitySerialize {
     public function SetColor($color){
         $this->color = $color;
     }
+    public function SetTextColor($textColor){
+        $this->textColor = $textColor;
+    }
     public function GetId(){
         return $this->id;
     }
@@ -66,6 +70,9 @@ class CalendarData extends _EntitySerialize {
     }
     public function GetColor(){
         return $this->color;
+    }
+    public function GetTextColor(){
+        return $this->textColor;
     }
     public function SetFullDate(){
         if (!is_null($this->startTime)) {

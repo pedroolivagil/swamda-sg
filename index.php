@@ -23,8 +23,7 @@ require_once('config.php');
     <link href="css/loader.css" rel="stylesheet">
     <script>
         $(document).ready(function() {
-            $('#header').load('components/nav.php');
-            $('#wrapper').load('components/wrapper.php');
+            reloadFrontal();
         });
     </script>
 </head>
@@ -37,7 +36,6 @@ require_once('config.php');
     </div>
     <div id="header"></div>
     <div id="wrapper"></div>
-    <div class="login-error-mesages" id="modal-info-wrapper"></div>
     <!-- Admin Modal -->
     <div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
         <div class="modal-dialog">

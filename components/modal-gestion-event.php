@@ -26,13 +26,13 @@ $user = unserialize($_SESSION['AUTH']);
         <div class="container mb-2" style="text-align:center;">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-colors" aria-expanded="false" aria-controls="collapse-colors" onclick="collapsePanels('#collapse-newuser,#collapse-deluser')">
-                    Gestionar colores
+                    Colores
                 </button>
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-newuser" aria-expanded="false" aria-controls="collapse-newuser" onclick="collapsePanels('#collapse-deluser,#collapse-colors')">
-                    Alta de empleado
+                    Alta
                 </button>
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-deluser" aria-expanded="false" aria-controls="collapse-deluser" onclick="collapsePanels('#collapse-colors,#collapse-newuser')">
-                    Baja de empleado
+                    Baja
                 </button>
             </div>
         </div>

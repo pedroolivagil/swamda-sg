@@ -101,6 +101,14 @@ html {
 
 .fs-7 {
     font-size: .7em;
+}
+
+.fs-8 {
+    font-size: .8em;
+}
+
+.fs-7,
+.fs-8 {
     line-height: 1em;
 }
 
@@ -235,9 +243,10 @@ select option:hover {
     text-decoration: none !important;
 }
 
-.fc-toolbar-title {
+
+/* .fc-toolbar-title {
     text-transform: capitalize;
-}
+} */
 
 .fc-h-event {
     border: 1px solid var(--fc-event-border-color, #FF0047);
@@ -313,7 +322,8 @@ tr.odd {
     background-color: #a00452;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:disabled {
     color: #FFF !important;
     background-color: #800040;
     border-color: #6b0036;

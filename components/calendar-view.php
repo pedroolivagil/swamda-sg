@@ -28,6 +28,11 @@ require_once('../server/controllers/controllers.php');
                 failure: function() {
                     alert("Error al recuperar datos del calendario");
                 }
+            },
+            eventTimeFormat: {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false,
             }
         });
         calendar.render();

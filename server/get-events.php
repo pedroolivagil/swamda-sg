@@ -22,15 +22,16 @@ if (!isset($_SESSION['AUTH'])) {
         $json .= ($key == 0) ? '' : ',';
         $unserial = array('auth', 'startTime', 'endTime');
         $current->SetFullDate();
-        if (is_null($current->GetUrl())){
+        if (empty($current->GetUrl())){
             array_push($unserial, 'url');
         }
-        if (is_null($current->GetEndDate())){
+        if (empty($current->GetEndDate())){
             array_push($unserial, 'end');
         }
         $json .= $current->serialize($unserial);
     }
     $json .= ']';
+    file_put_contents("test.json",$json);
 
     $time_zone = null;
     if (isset($_GET['timeZone'])) {

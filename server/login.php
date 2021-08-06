@@ -8,6 +8,8 @@ if (isset($userBD) && $passCrypted == $userBD->GetPassword()){
     $user = $userController->findByUsername($data['user']);
     $userController->signLogin($user);
     Tools::updateSessionUser($user);
+    echo Tools::printSuccessAlert("Iniciando sesión...");
+    echo '<script>reloadFrames(1500)</script>';
 } else {
-    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">Error, el usuario no existe o la contraseña es incorrecta.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+    echo Tools::printErrorAlert('Error, el usuario no existe o la contraseña es incorrecta.');
 }

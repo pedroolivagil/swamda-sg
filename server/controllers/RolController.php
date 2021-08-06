@@ -1,21 +1,38 @@
 <?php
-require_once('../config.php');
-Tools::init();
 class RolController {
-    public function isGerente(User $user){
-        $result = false;
-		$sql = Tools::getDB()->query('SELECT id FROM rol WHERE name = "Gerente"');
-		if ($res = $sql->fetch_array()) {
-            $result = $res['id'] == $user->GetRol();
-		}
-        return $result;
+    private $roles;
+    const EMPLEADO = "Empleado";
+    const GERENTE = "Gerente";
+    const ADMINISTRADOR = "Administrador";
+
+    public function __construct() {
+        $this->roles = array();
+        $sql = Tools::getDB()->query('SELECT id, name FROM ' . _TROL_);
+        while ($res = $sql->fetch_array()) {
+            array_push($this->roles, new Rol(intval($res['id']), $res['name']));
+        }
     }
-    public function isEmpleado(User $user){
-        $result = false;
-		$sql = Tools::getDB()->query('SELECT id FROM rol WHERE name = "Empleado"');
-		if ($res = $sql->fetch_array()) {
-            $result = $res['id'] == $user->GetRol();
-		}
-        return $result;
+
+    private function _getRol($userRol) {
+        $rol = NULL;
+        foreach ($this->roles as $key => $roltmp) {
+            if ($roltmp->GetId() == $userRol) {
+                $rol = $key;
+            }
+        }
+        return $rol;
+    }
+
+    public function isGerente(User $user) {
+        $rol = $this->roles[$this->_getRol($user->GetRol())];
+        return array_search($rol->GetName(), array(self::GERENTE, self::ADMINISTRADOR)) !== false;
+    }
+    public function isAdministrador(User $user) {
+        $rol = $this->roles[$this->_getRol($user->GetRol())];
+        return array_search($rol->GetName(), array(self::ADMINISTRADOR)) !== false;
+    }
+    public function isEmpleado(User $user) {
+        $rol = $this->roles[$this->_getRol($user->GetRol())];
+        return array_search($rol->GetName(), array(self::GERENTE, self::ADMINISTRADOR)) === false;
     }
 }

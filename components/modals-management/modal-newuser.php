@@ -1,6 +1,6 @@
 <?php $disabled = ($rolController->isGerente($user)) ? '' : 'disabled'; ?>
 <div class="collapse multi-collapse" id="collapse-newuser">
-    <form onsubmit="newUser();return false;">
+    <form id="," onsubmit="newUser();return false;">
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="realname" required>
             <label for="realname">Nombre</label>

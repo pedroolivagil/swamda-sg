@@ -1,5 +1,6 @@
 <?php require_once('../config.php');
 require_once('../model/tools/_EntitySerialize.php');
+require_once('../model/users/Rol.php');
 require_once('../model/users/User.php');
 require_once('../model/users/UserLogin.php');
 require_once('../model/users/CalendarData.php');

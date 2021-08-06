@@ -1,11 +1,3 @@
-function getContrastYIQ(hexcolor) {
-    var r = parseInt(hexcolor.substr(0, 2), 16);
-    var g = parseInt(hexcolor.substr(2, 2), 16);
-    var b = parseInt(hexcolor.substr(4, 2), 16);
-    var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-    return (yiq >= 128) ? 'black' : 'white';
-}
-
 function ajaxForm(ruta, data, func) {
     $.ajax({
         url: ruta, //Url a donde la enviaremos
@@ -21,30 +13,33 @@ function ajaxForm(ruta, data, func) {
     });
 }
 
-function loginNav() {
-    var user = document.getElementById("user").value;
-    var pass = document.getElementById("pass").value;
-    login(user, pass, function(msg) {
-        $('#modal-info-wrapper').html(msg);
-    });
-}
-
 function loginCard() {
     var user = document.getElementById("usercard").value;
     var pass = document.getElementById("passcard").value;
-    login(user, pass, function(msg) {
-        $('#modal-info-wrapper').html(msg);
-    });
-}
-
-function login(user, pass, func) {
     var data = new FormData();
     data.append('user', user);
     data.append('pass', pass);
     ajaxForm('server/login.php', data, function(msg) {
-        $('#wrapper').load('components/wrapper.php');
-        $('#header').load('components/nav.php');
-        func(msg);
+        $('#modal-info-wrapper').html(msg);
+    });
+}
+
+function reloadFrames(time) {
+    $(setTimeout(function() {
+        reloadFrontal();
+        // $('#header').load('components/nav.php');
+        // $('#wrapper').load('components/wrapper.php');
+    }, time));
+}
+
+function reloadFrontal() {
+    $('#header, #wrapper').hide(function() {
+        $('#header').load('components/nav.php', function() {
+            $('#header').fadeIn(500);
+        });
+        $('#wrapper').load('components/wrapper.php', function() {
+            $('#wrapper').fadeIn(500);
+        });
     });
 }
 
@@ -203,6 +198,18 @@ function newUser() {
 
     ajaxForm('server/new-user.php', data, function(msg) {
         $('#result-panel-modal-gestion-event-newuser').html(msg);
+    });
+}
+
+function delUser() {
+    var users = document.getElementById('users').value;
+    var password = document.getElementById('password').value;
+    var data = new FormData();
+    data.append('iduser', users);
+    data.append('password', password);
+
+    ajaxForm('server/del-user.php', data, function(msg) {
+        $('#result-panel-modal-gestion-event-deluser').html(msg);
     });
 }
 

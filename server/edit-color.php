@@ -11,7 +11,7 @@ if (!isset($_SESSION['AUTH'])) {
     $colorPanel = isset($_POST['panelId']) && !empty($_POST['panelId']) ? $_POST['panelId'] : 'color';
     $modalPanel = isset($_POST['modalId']) && !empty($_POST['modalId']) ? $_POST['modalId'] : 'conf';
     if ($color == strtoupper($user->GetColor())) {
-        echo Tools::printErrorAlert("LEl nuevo teléfono debe ser distinto.");
+        echo Tools::printErrorAlert("El nuevo color debe ser distinto.");
     } else {
         $user->SetColor($color);
         if ($userController->updateColor($user)) {

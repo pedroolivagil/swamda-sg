@@ -20,6 +20,7 @@
                     <div class="mb-3">
                         <input type="password" class="form-control me-2" placeholder="Contraseña" id="passcard" required>
                     </div>
+                    <div class="login-error-mesages" id="modal-info-wrapper"></div>
                     <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>

@@ -133,6 +133,18 @@ class UserController {
         }
         return $collection;
     }
+    public function findByUsernameOrMail($usernameMail) {
+        $user = null;
+        $sql = Tools::getDB()->query('SELECT id, email, username, realname FROM ' . _TUSER_ . ' WHERE flag_Activo = TRUE AND upper(username) LIKE "' . strtoupper($usernameMail).'" OR lower(email) LIKE "'. strtolower($usernameMail).'"');
+        if ($res = $sql->fetch_array()) {
+            $user = new User();
+            $user->SetId($res['id']);
+            $user->SetEmail($res['email']);
+            $user->SetUsername($res['username']);
+            $user->SetRealname($res['realname']);
+        }
+        return $user;
+    }
     public function signLogin(User $user) {
         $result = false;
         if (Tools::getDB()->query('INSERT INTO ' . _TULOG_ . ' (id_user) VALUES (' . $user->GetId() . ')')) {
@@ -164,6 +176,13 @@ class UserController {
     public function updateColor(User $user) {
         $result = false;
         if (Tools::getDB()->query('UPDATE ' . _TUSER_ . ' SET color = "' . $user->GetColor() . '" WHERE id = ' . $user->GetId())) {
+            $result = true;
+        }
+        return $result;
+    }
+    public function updatePasword(User $user) {
+        $result = false;
+        if (Tools::getDB()->query('UPDATE ' . _TUSER_ . ' SET password = "' . $user->GetPassword() . '" WHERE id = ' . $user->GetId())) {
             $result = true;
         }
         return $result;

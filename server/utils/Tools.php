@@ -279,4 +279,9 @@ abstract class Tools {
 		$txt = str_replace('[NAME]', ucfirst($realname), str_replace('[USERNAME]', ucfirst($username), $file));
 		return $txt;
 	}
+	public static function getMailBodyRecoveryPass($realname,$username, $pass) {
+		$file = file_get_contents(MAILBODY_RECPASS) or exit("Error catastrofico");
+		$txt = str_replace('[NAME]', ucfirst($realname), str_replace('[USERNAME]', ucfirst($username), str_replace('[KEY]', ucfirst($pass), $file)));
+		return $txt;
+	}
 }

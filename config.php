@@ -21,6 +21,7 @@ $root = ($_SERVER['SERVER_NAME']=='localhost')? '/swamda-sg':'';
 // define('MAILBODY_NEWORDER', $_SERVER['DOCUMENT_ROOT'].$root.'/forms/neworder.txt');
 define('MAILBODY_NEWUSER',  $_SERVER['DOCUMENT_ROOT'] . $root . '/config/alta.txt');
 define('MAILBODY_DELUSER',  $_SERVER['DOCUMENT_ROOT'] . $root . '/config/baja.txt');
+define('MAILBODY_RECPASS',  $_SERVER['DOCUMENT_ROOT'] . $root . '/config/recoverypass.txt');
 // define('MAILBODY_RECOVERY',  $_SERVER['DOCUMENT_ROOT'].$root.'/forms/recovery.txt');
 // define('_LEGAL_FILE_','legal.txt');
 

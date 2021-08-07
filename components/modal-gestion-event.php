@@ -29,10 +29,10 @@ $user = unserialize($_SESSION['AUTH']);
                     Colores
                 </button>
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-newuser" aria-expanded="false" aria-controls="collapse-newuser" onclick="collapsePanels('#collapse-deluser,#collapse-colors')">
-                    Alta
+                    Alta nueva
                 </button>
                 <button class="btn btn-sm btn-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-deluser" aria-expanded="false" aria-controls="collapse-deluser" onclick="collapsePanels('#collapse-colors,#collapse-newuser')">
-                    Baja
+                    Ejecutar baja
                 </button>
             </div>
         </div>

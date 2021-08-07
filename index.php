@@ -44,6 +44,7 @@ require_once('config.php');
             </div>
         </div>
     </div>
+    <?php include_once('components/modal-recovery-pass.php'); ?>
     <div style="display: none;" data-bs-restore-blur="" id="recovery"></div>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>

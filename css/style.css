@@ -25,7 +25,7 @@ html {
     background-repeat: repeat;
     /* fondo zigzag */
     /* background-position: 13px 0, 13px 0, 0 0, 0 0;
-	background-size: 26px 26px; */
+background-size: 26px 26px; */
 }
 
 .title {
@@ -243,6 +243,14 @@ select option:hover {
     text-decoration: none !important;
 }
 
+.fc-toolbar-title {
+    text-transform: lowercase;
+}
+
+.fc-toolbar-title::first-letter {
+    text-transform: uppercase;
+}
+
 .fc-h-event {
     /* border: 1px solid var(--fc-event-border-color, #FF0047); */
     /* background-color: var(--fc-event-bg-color, #FF0047); */
@@ -270,7 +278,7 @@ select option:hover {
 
 
 /* .login-card, .navbar, .fc-daygrid, .fc-dayGridMonth-view, .fc-view {
-	box-shadow: #ffb2c2 0 0 5px; 
+box-shadow: #ffb2c2 0 0 5px; 
 } */
 
 .fc-theme-standard .fc-scrollgrid,

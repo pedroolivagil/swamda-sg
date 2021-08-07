@@ -27,7 +27,7 @@
                 </form>
             </div>
             <div class="card-footer bg-transparent">
-                <a href="#" class="fs-7">He olvidado la contraseña</a>
+                <a href="#" class="fs-7" onclick="$('#recoveryModal').modal('show');">He olvidado la contraseña</a>
             </div>
         </div>
     </div>

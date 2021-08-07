@@ -16,9 +16,8 @@ require_once('../server/controllers/controllers.php');
             initialView: 'dayGridMonth',
             locale: 'es',
             headerToolbar: {
-                right: 'dayGridMonth,dayGridDay today',
-                center: 'title',
-                left: 'prev,next'
+                right: 'prev,next today,dayGridMonth,dayGridDay',
+                left: 'title',
             },
             initialDate: getToday(),
             navLinks: true,
@@ -29,12 +28,17 @@ require_once('../server/controllers/controllers.php');
                     alert("Error al recuperar datos del calendario");
                 }
             },
-            eventColor: '#378006',
+            eventDisplay: 'block', //para ver las fechas con fondo de color
             eventTimeFormat: {
                 hour: '2-digit',
                 minute: '2-digit',
                 meridiem: false
-            }
+            },
+            dateClick: function(info) {
+                calendar.changeView('dayGridDay', info.dateStr);
+            },
+            moreLinkClassNames: 'btn btn-sm btn-info text-white p-0 px-1 m-0',
+            moreLinkContent: 'más...',
         });
         calendar.render();
     </script>

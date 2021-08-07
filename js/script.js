@@ -213,6 +213,16 @@ function delUser() {
     });
 }
 
+function recoveryPass() {
+    var email = document.getElementById('email').value;
+    var data = new FormData();
+    data.append('email', email);
+
+    ajaxForm('server/recovery-pass.php', data, function(msg) {
+        $('#result-panel-modal-recovery-pass-email').html(msg);
+    });
+}
+
 ////////////////////////////////
 // Auto ejecutable
 $(document).ready(function() {

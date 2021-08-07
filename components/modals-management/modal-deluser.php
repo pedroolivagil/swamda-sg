@@ -25,7 +25,7 @@ $disabled = $isAdmin ? '' : 'disabled';
         </div>
         <div id="result-panel-modal-gestion-event-deluser"></div>
         <div class="width-100">
-            <button type="submit" class="btn btn-primary width-100" <?= $disabled; ?>>Dar de baja</button>
+            <button type="submit" class="btn btn-primary width-100" <?= $disabled; ?>>Dar de baja al empleado</button>
         </div>
     </form>
 </div>

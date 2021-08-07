@@ -352,11 +352,15 @@ tr.odd {
     box-shadow: 0 0 .3rem #a0045288 !important;
 }
 
+.card-header,
 .modal-title,
 .page-link,
 .page-link:hover,
 .page-link:active,
-.page-link:focus {
+.page-link:focus,
+a,
+a:visited,
+a:focus {
     color: #800040;
 }
 
@@ -368,7 +372,8 @@ tr.odd {
 .page-item.disabled,
 .page-link:hover,
 .page-link:active,
-.page-link:focus {
+.page-link:focus,
+a:hover {
     border-color: #6b003688 !important;
 }
 
@@ -384,4 +389,8 @@ tr.odd {
 
 .form-control-color {
     max-width: 8rem !important;
+}
+
+a {
+    text-decoration: none;
 }

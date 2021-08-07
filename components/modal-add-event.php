@@ -56,16 +56,16 @@ require_once('../server/controllers/controllers.php');
                     <label for="end">Fecha fin del evento (opcional)</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="url">
-                    <label for="url">URL del evento (opcional)</label>
-                </div>
-                <div class="form-floating mb-3">
                     <input type="time" class="form-control" id="startTime">
                     <label for="startTime">Hora inicio del evento (opcional)</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="time" class="form-control" id="endTime">
                     <label for="endTime">Hora fin del evento (opcional)</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="url">
+                    <label for="url">URL del evento (opcional)</label>
                 </div>
             </div>
         </form>

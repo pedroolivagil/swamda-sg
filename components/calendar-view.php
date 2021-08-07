@@ -29,10 +29,11 @@ require_once('../server/controllers/controllers.php');
                     alert("Error al recuperar datos del calendario");
                 }
             },
+            eventColor: '#378006',
             eventTimeFormat: {
                 hour: '2-digit',
                 minute: '2-digit',
-                hour12: false,
+                meridiem: false
             }
         });
         calendar.render();

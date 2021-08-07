@@ -243,15 +243,10 @@ select option:hover {
     text-decoration: none !important;
 }
 
-
-/* .fc-toolbar-title {
-    text-transform: capitalize;
-} */
-
 .fc-h-event {
-    border: 1px solid var(--fc-event-border-color, #FF0047);
-    background-color: var(--fc-event-bg-color, #FF0047);
-    color: #FFF;
+    /* border: 1px solid var(--fc-event-border-color, #FF0047); */
+    /* background-color: var(--fc-event-bg-color, #FF0047); */
+    /* color: #FFF; */
     padding: 0 5px;
 }
 

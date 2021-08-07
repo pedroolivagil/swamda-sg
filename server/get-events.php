@@ -31,7 +31,6 @@ if (!isset($_SESSION['AUTH'])) {
         $json .= $current->serialize($unserial);
     }
     $json .= ']';
-    file_put_contents("test.json",$json);
 
     $time_zone = null;
     if (isset($_GET['timeZone'])) {

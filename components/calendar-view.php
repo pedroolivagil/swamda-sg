@@ -34,11 +34,24 @@ require_once('../server/controllers/controllers.php');
                 minute: '2-digit',
                 meridiem: false
             },
+            displayEventTime: true,
+            displayEventEnd: true,
             dateClick: function(info) {
                 calendar.changeView('dayGridDay', info.dateStr);
             },
             moreLinkClassNames: 'btn btn-sm btn-info text-white p-0 px-1 m-0',
             moreLinkContent: 'más...',
+            popupDetailDate: function(isAllDay, start, end) {
+                var isSameDate = moment(start).isSame(end);
+                var endFormat = (isSameDate ? '' : 'YYYY.MM.DD ') + 'hh:mm a';
+
+                if (isAllDay) {
+                    return moment(start).format('YYYY.MM.DD') + (isSameDate ? '' : ' - ' + moment(end).format(
+                        'YYYY.MM.DD'));
+                }
+
+                return (moment(start).format('YYYY.MM.DD hh:mm a') + ' - ' + moment(end).format(endFormat));
+            },
         });
         calendar.render();
     </script>

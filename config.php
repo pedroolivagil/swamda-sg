@@ -9,11 +9,13 @@
 // define('CONTRATO', 'contrato');
 define('MAILTECNIC', 'pedroolivagil@gmail.com');
 
+$dbconfuri = 'conf/conf-db-'.(($_SERVER['SERVER_NAME'] == 'localhost') ? 'local' : 'server').'.json';
+$dbconf = Tools::readConfig($dbconfuri);
 // DB Constants
-define('dbhost', 'localhost');
-define('dbname', 'swamda-sg');
-define('dbuser', 'swamda-sg');
-define('dbpass', 'tY5ia3&0_Ab21swamdasg');
+define('dbhost', $dbconf['host']);
+define('dbname', $dbconf['dbname']);
+define('dbuser', $dbconf['dbuser']);
+define('dbpass', $dbconf['dbpass']);
 
 // '/epic-telecom' solo para ámbito local
 $root = ($_SERVER['SERVER_NAME']=='localhost')? '/swamda-sg':'';

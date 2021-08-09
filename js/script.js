@@ -26,16 +26,18 @@ function loginCard() {
 
 function reloadFrames(time) {
     $(setTimeout(function() {
-        reloadFrontal();
+        reloadFrontal(true);
         // $('#header').load('components/nav.php');
         // $('#wrapper').load('components/wrapper.php');
     }, time));
 }
 
-function reloadFrontal() {
-    $('#header, #wrapper').hide(function() {
+function reloadFrontal(loadNav) {
+    $('#header, #wrapper').hide(0, function() {
         $('#header').load('components/nav.php', function() {
-            $('#header').fadeIn(500);
+            if (loadNav) {
+                $('#header').fadeIn(500);
+            }
         });
         $('#wrapper').load('components/wrapper.php', function() {
             $('#wrapper').fadeIn(500);
@@ -48,6 +50,7 @@ function logoutNav() {
     ajaxForm('server/logout.php', data, function(msg) {
         $('#header').load('components/nav.php');
         $('#wrapper').load('components/login-card.php');
+        $('#header').fadeOut(0);
     });
 }
 

@@ -35,7 +35,7 @@ $user = unserialize($_SESSION['AUTH']);
                         <hr class="dropdown-divider">
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="gestion" data-bs-default-collapse-panel="#collapse-deluser" data-bs-blur-panels="#header,#wrapper" id="gestion-event">
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#adminModal" data-bs-whatever="gestion" data-bs-default-collapse-panel="#collapse-colors" data-bs-blur-panels="#header,#wrapper" id="gestion-event">
                             <i class="me-3 bi bi-people-fill"></i>Gestionar empleados
                         </a>
                     </li>

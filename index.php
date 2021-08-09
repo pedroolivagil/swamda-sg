@@ -1,5 +1,6 @@
 <?php session_start();
 require_once('config.php');
+$component = isset($_SESSION['AUTH']) ? 'calendar-view' : 'login-card';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -9,12 +10,12 @@ require_once('config.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SWAMDA SG</title>
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/bootstrap/jquery.dataTables.min.js"></script>
     <script src="third.party/jQueryMask/jquery.mask.min.js"></script>
-    <script src="js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/bootstrap/dataTables.bootstrap5.min.js"></script>
     <script src="js/script.js"></script>
     <link href='third.party/fullcalendar-5.9.0/lib/main.css' rel='stylesheet' />
     <script src='third.party/fullcalendar-5.9.0/lib/main.js'></script>
@@ -23,12 +24,13 @@ require_once('config.php');
     <link href="css/loader.css" rel="stylesheet">
     <script>
         $(document).ready(function() {
-            reloadFrontal();
+            reloadFrontal(<?= $component == 'calendar-view' ? "true" : "false"; ?>);
         });
     </script>
 </head>
 
 <body class="user-select-none">
+    <div class="blur-bg"></div>
     <div class="center-loader text-center">
         <div class="lds-heart">
             <div></div>
@@ -46,7 +48,7 @@ require_once('config.php');
     </div>
     <?php include_once('components/modal-recovery-pass.php'); ?>
     <div style="display: none;" data-bs-restore-blur="" id="recovery"></div>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

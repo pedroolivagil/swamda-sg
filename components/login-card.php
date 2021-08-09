@@ -9,9 +9,12 @@
 <body>
     <div class="center-loader">
         <div class="card login-card">
-            <div class="card-header">
-                Inicia sesión
+            <div class="card-header text-center">
+                <a class="navbar-brand title">SWAMDA SG</a>
             </div>
+            <!-- <div class="card-header">
+                Inicia sesión
+            </div> -->
             <div class="card-body">
                 <form onsubmit="loginCard();return false;">
                     <div class="mb-3">

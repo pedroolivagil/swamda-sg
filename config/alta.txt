@@ -46,7 +46,7 @@
 						<td colspan="2"><p>El administrador de <strong class="title">SWAMDA SG</strong> te ha dado de alta con los siguientes credenciales:</p></td>
 					</tr>
 					<tr>
-						<td style="width: 50px;">Usuario</td>
+						<td style="width: 70px;">Usuario</td>
 						<td><span class="title">[USERNAME]</span></td>
 					</tr>
 					<tr>
@@ -55,7 +55,7 @@
 					</tr>
 				</table>
 				<div class="line"></div>
-				<p>Puedes acceder a la aplicación desde este enlace.</p>
+				<p>Puedes acceder a la aplicación desde este <a href="[HOST]" target="_blank">aquí</a>.</p>
 				<p><strong>Te recomendamos encarecidamente que modifiques la contraseña por motivos de seguridad.</strong></p>
 			</div>
 		</div>

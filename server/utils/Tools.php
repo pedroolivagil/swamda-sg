@@ -271,17 +271,35 @@ abstract class Tools {
 	}
 	public static function getMailBodyNewUser($realname, $username, $pass) {
 		$file = file_get_contents(MAILBODY_NEWUSER) or exit("Error catastrofico");
-		$txt = str_replace('[NAME]', ucfirst($realname), str_replace('[USERNAME]', ucfirst($username), str_replace('[KEY]', ucfirst($pass), $file)));
+		$txt = self::_replaceVarsFile($file, array(
+			'name' => ucfirst($realname),
+			'username' => ucfirst($username),
+			'key' => $pass,
+			'host' => _ROOT_PATH_
+		));
 		return $txt;
 	}
 	public static function getMailBodyDelUser($realname, $username) {
 		$file = file_get_contents(MAILBODY_DELUSER) or exit("Error catastrofico");
-		$txt = str_replace('[NAME]', ucfirst($realname), str_replace('[USERNAME]', ucfirst($username), $file));
+		$txt = self::_replaceVarsFile($file, array(
+			'name' => ucfirst($realname),
+			'username' => ucfirst($username)
+		));
 		return $txt;
 	}
-	public static function getMailBodyRecoveryPass($realname,$username, $pass) {
+	public static function getMailBodyRecoveryPass($realname, $username, $pass) {
 		$file = file_get_contents(MAILBODY_RECPASS) or exit("Error catastrofico");
-		$txt = str_replace('[NAME]', ucfirst($realname), str_replace('[USERNAME]', ucfirst($username), str_replace('[KEY]', ucfirst($pass), $file)));
+		$txt = self::_replaceVarsFile($file, array(
+			'name' => ucfirst($realname),
+			'username' => ucfirst($username),
+			'key' => $pass,
+		));
 		return $txt;
+	}
+	private static function _replaceVarsFile($textFile, $arrayObject) {
+		foreach ($arrayObject as $key => $value) {
+			$textFile = str_replace('[' . strtoupper($key) . ']', $value, $textFile);
+		}
+		return $textFile;
 	}
 }

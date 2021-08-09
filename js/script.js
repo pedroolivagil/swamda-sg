@@ -226,6 +226,18 @@ function recoveryPass() {
     });
 }
 
+function labelShowHidePassword(idInput) {
+    if ($('#' + idInput + ' input').attr("type") == "text") {
+        $('#' + idInput + ' input').attr('type', 'password');
+        $('#' + idInput + ' i').addClass("bi-eye-slash");
+        $('#' + idInput + ' i').removeClass("bi-eye");
+    } else if ($('#' + idInput + ' input').attr("type") == "password") {
+        $('#' + idInput + ' input').attr('type', 'text');
+        $('#' + idInput + ' i').removeClass("bi-eye-slash");
+        $('#' + idInput + ' i').addClass("bi-eye");
+    }
+}
+
 ////////////////////////////////
 // Auto ejecutable
 $(document).ready(function() {
@@ -252,6 +264,29 @@ $(document).ready(function() {
         });
     });
     adminModal.addEventListener('hidden.bs.modal', function(event) {
+        var panelId = $('#recovery').attr('data-bs-restore-blur');
+        var blurredPanels = $('#' + panelId).attr('data-bs-blur-panels');
+        if (blurredPanels != null) {
+            var panelsArr = blurredPanels.split(",");
+            for (var index in panelsArr) {
+                $(panelsArr[index]).removeClass('filter-blur-10');
+            }
+        }
+    });
+    var recoveryModal = document.getElementById('recoveryModal')
+    recoveryModal.addEventListener('show.bs.modal', function(event) {
+        var button = event.relatedTarget;
+        var panelId = button.getAttribute('id');
+        var blurredPanels = button.getAttribute('data-bs-blur-panels');
+        if (blurredPanels != null) {
+            $('#recovery').attr('data-bs-restore-blur', panelId);
+            var panelsArr = blurredPanels.split(",");
+            for (var index in panelsArr) {
+                $(panelsArr[index]).addClass('filter-blur-10');
+            }
+        }
+    });
+    recoveryModal.addEventListener('hidden.bs.modal', function(event) {
         var panelId = $('#recovery').attr('data-bs-restore-blur');
         var blurredPanels = $('#' + panelId).attr('data-bs-blur-panels');
         if (blurredPanels != null) {

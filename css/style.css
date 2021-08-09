@@ -144,7 +144,7 @@ select option:hover {
 }
 
 .filter-blur-10 {
-    filter: blur(10px) !important;
+    filter: blur(3px) !important;
 }
 
 .hidden {

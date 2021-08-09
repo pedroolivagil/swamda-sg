@@ -293,6 +293,7 @@ abstract class Tools {
 			'name' => ucfirst($realname),
 			'username' => ucfirst($username),
 			'key' => $pass,
+			'host' => _ROOT_PATH_
 		));
 		return $txt;
 	}

@@ -46,7 +46,7 @@
 						<td colspan="2"><p>El administrador de <strong class="title">SWAMDA SG</strong> te ha dado de baja de la plataforma</p></td>
 					</tr>
 					<tr>
-						<td style="width: 50px;">Usuario</td>
+						<td style="width: 70px;">Usuario</td>
 						<td><span class="title">[USERNAME]</span></td>
 					</tr>
 				</table>

@@ -1,5 +1,5 @@
 {
-    "host": "localhost",
+    "dbhost": "localhost",
     "dbname": "swamda-sg",
     "dbuser": "swamda-sg",
     "dbpass": "tY5ia3&0_Ab21swamdasg"

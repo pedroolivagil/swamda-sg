@@ -9,14 +9,6 @@
 // define('CONTRATO', 'contrato');
 define('MAILTECNIC', 'pedroolivagil@gmail.com');
 
-$dbconfuri = 'conf/conf-db-'.(($_SERVER['SERVER_NAME'] == 'localhost') ? 'local' : 'server').'.json';
-$dbconf = Tools::readConfig($dbconfuri);
-// DB Constants
-define('dbhost', $dbconf['host']);
-define('dbname', $dbconf['dbname']);
-define('dbuser', $dbconf['dbuser']);
-define('dbpass', $dbconf['dbpass']);
-
 // '/epic-telecom' solo para ámbito local
 $root = ($_SERVER['SERVER_NAME']=='localhost')? '/swamda-sg':'';
 // define('MAILBODY_NEWUSER',  $_SERVER['DOCUMENT_ROOT'].$root.'/forms/newuser.txt');
@@ -53,4 +45,13 @@ header('Content-type: text/html; charset=utf-8');
 require_once('third.party/vendor/autoload.php');
 require_once('server/utils/Tools.php');
 require_once('server/utils/Mail.php');
+
+$dbconfuri = $_SERVER['DOCUMENT_ROOT'] . $root . '/config/conf-db-'.(($_SERVER['SERVER_NAME'] == 'localhost') ? 'local' : 'server').'.json';
+$dbconf = Tools::readConfig($dbconfuri);
+// DB Constants
+define('dbhost', $dbconf['dbhost']);
+define('dbname', $dbconf['dbname']);
+define('dbuser', $dbconf['dbuser']);
+define('dbpass', $dbconf['dbpass']);
+
 Tools::init();

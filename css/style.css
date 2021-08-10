@@ -159,6 +159,20 @@ select option:hover {
     cursor: pointer;
 }
 
+.version-app {
+    background: #FFFFFF88 !important;
+    outline: 1px solid #800040;
+    color: #800040;
+    border-radius: 5px 5px 0 0;
+    font-size: .6em;
+    text-align: center;
+    left: calc(50% - 25px);
+    width: 50px;
+    bottom: 0;
+    position: absolute;
+    line-height: 2em;
+}
+
 
 /**********************  Estilos por tipo pantalla  ************************/
 

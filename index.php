@@ -49,6 +49,7 @@ $component = isset($_SESSION['AUTH']) ? 'calendar-view' : 'login-card';
     <?php include_once('components/modal-recovery-pass.php'); ?>
     <div style="display: none;" data-bs-restore-blur="" id="recovery"></div>
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <div class="version-app">1.0.0</div>
 </body>
 
 </html>

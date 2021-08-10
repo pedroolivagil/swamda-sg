@@ -1,3 +1,7 @@
+<?php session_start();
+require_once('../config.php');
+require_once('../server/controllers/controllers.php');
+?>
 <!doctype html>
 <html>
 
@@ -35,6 +39,7 @@
             <div class="card-footer bg-transparent">
                 <a href="#" class="fs-7" id="recovery-button" data-bs-toggle="modal" data-bs-target="#recoveryModal" data-bs-blur-panels="#login-card">He olvidado la contraseña</a>
             </div>
+            <div class="version-app"><?= _VERSION_APP_; ?></div>
         </div>
     </div>
 </body>

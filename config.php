@@ -2,7 +2,7 @@
 /*******************************/
 /*   SWAMDA SG Config    */
 /*******************************/
-
+define('_VERSION_APP_','v1.0');
 // define('EXPIRE', time() + (2 * 24 * 60 * 60));					// 2 dias; 24 horas; 60 min; 60 s
 // define('MAXFILESIZE', ini_get('upload_max_filesize')*1024); 	// En KB -> 3MB
 // define('MAXDIRSIZE', 20480);  		// en KB -> 20MB
